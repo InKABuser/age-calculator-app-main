@@ -53,15 +53,15 @@ MONTH.addEventListener('input', (e)=>{
         // Check if the value is outside the valid range for days (1-31)
         MONTH.classList.add('error');
         MONTH_ERROR_MESSAGE.classList.add('error');
-        MONTH_ERROR_MESSAGE.innerHTML = "Must be a valid day";
+        MONTH_ERROR_MESSAGE.innerHTML = "Must be a valid month";
         monthOutput.innerHTML = "--";
     } else {
         // If the input is valid
         MONTH.classList.remove('error');
         MONTH_ERROR_MESSAGE.classList.remove('error');
         MONTH_ERROR_MESSAGE.innerHTML = '';
-        let monthNumber = TodayDate.getMonth();
-        let monthDiff = monthNumber - monthValue + 1;
+        let monthNumber = TodayDate.getMonth() + 1;
+        let monthDiff = monthNumber - monthValue ;
         monthOutput.innerHTML = monthDiff;
     }
 })
@@ -80,7 +80,7 @@ YEAR.addEventListener('input', (e)=>{
         YEAR.classList.add('error');
         YEAR_ERROR_MESSAGE.classList.add('error');
         YEAR_ERROR_MESSAGE.innerHTML = "Must be a valid day";
-        YEAR.innerHTML = "--";
+        yearOutput.innerHTML = "--";
     } else {
         // If the input is valid
         YEAR.classList.remove('error');
