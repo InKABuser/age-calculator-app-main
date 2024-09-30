@@ -79,7 +79,7 @@ YEAR.addEventListener('input', (e)=>{
         // Check if the value is outside the valid range for days (1-31)
         YEAR.classList.add('error');
         YEAR_ERROR_MESSAGE.classList.add('error');
-        YEAR_ERROR_MESSAGE.innerHTML = "Must be a valid day";
+        YEAR_ERROR_MESSAGE.innerHTML = "Must be a valid Year";
         yearOutput.innerHTML = "--";
     } else {
         // If the input is valid
